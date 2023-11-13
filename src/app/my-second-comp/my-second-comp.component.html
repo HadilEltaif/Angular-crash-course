@@ -10,14 +10,19 @@
           <input type="password" class="form-control" id="inputPassword4" name="password" [(ngModel)]="password">
         </div>
         <div class="col-12">
-          <button type="submit" class="btn btn-primary">Sign in</button>
+          <button type="submit" (click)="onSubmit()" class="btn btn-primary">Sign in</button>
         </div>
       </form>
 </div>
 
 
-<div class="container  mb-4" >
+<!-- <div class="container  mb-4" >
     <h2>Form Data</h2>
     <p><strong>Email :</strong> {{email}}</p>
     <p><strong>Password :</strong> {{password}}</p>
-</div>
+</div> -->
+
+<div class="flex-container" *ngIf="isSubmitted">
+  <app-message-details *ngFor="let msg of messages;let i=index" [message] = 'msg'>
+ </app-message-details>
+ </div>

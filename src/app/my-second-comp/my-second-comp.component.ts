@@ -6,6 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./my-second-comp.component.scss']
 })
 export class MySecondCompComponent {
-  email: string ='hadil@gmail.com';
-  password: string ='jjjkioz';
+onSubmit() {
+  this.isSubmitted=true;
+  this.messages.push({'email':this.email, 'password':this.password})
+throw new Error('Method not implemented.');
+}
+  email: string ='';
+  password: string ='';
+  isSubmitted: boolean = false;
+  messages: Array<any> = [];
 }
