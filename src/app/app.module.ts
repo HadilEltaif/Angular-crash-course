@@ -7,6 +7,7 @@ import { MyFirstCompComponent } from './my-first-comp/my-first-comp.component';
 import { FormsModule } from '@angular/forms';
 import { MySecondCompComponent } from './my-second-comp/my-second-comp.component';
 import { MessageDetailsComponent } from './message-details/message-details.component';
+import { MyFirstService } from './services/my-first.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { MessageDetailsComponent } from './message-details/message-details.compo
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [MyFirstService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
