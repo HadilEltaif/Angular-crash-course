@@ -10,6 +10,11 @@ import { MessageDetailsComponent } from './message-details/message-details.compo
 import { MyFirstService } from './services/my-first.service';
 import { MenuComponent } from './menu/menu.component';
 import { AboutComponent } from './about/about.component';
+import { ProductService } from './services/api/products/product.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ProductsComponent } from './products/products.component';
+import { ProductsDetailsComponent } from './products-details/products-details.component';
+import { NewProductComponent } from './new-product/new-product.component';
 
 @NgModule({
   declarations: [
@@ -18,14 +23,21 @@ import { AboutComponent } from './about/about.component';
     MySecondCompComponent,
     MessageDetailsComponent,
     MenuComponent,
-    AboutComponent
+    AboutComponent,
+    ProductsComponent,
+    ProductsDetailsComponent,
+    NewProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [MyFirstService],
+  providers: [
+    MyFirstService,
+    HttpClient
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
